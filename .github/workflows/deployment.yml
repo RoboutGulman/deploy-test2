@@ -31,5 +31,6 @@ jobs:
     - uses: JamesIves/github-pages-deploy-action@4.1.4
       name: gh-pages publish
       with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
         folder: ./testDeploy/bin/release/net8.0/publish/wwwroot
