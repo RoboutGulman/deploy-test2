@@ -18,8 +18,7 @@ jobs:
         include-prerelease: true
         
     - name: publish
-      run: |
-        cd testDeploy
+      run: 
         dotnet publish -c release
       
     - name: Change base-tag in index.html from / to the necessary
