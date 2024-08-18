@@ -23,10 +23,10 @@ jobs:
         dotnet publish -c release
       
     - name: Change base-tag in index.html from / to the necessary
-      run: sed -i 's/<base href="\/" \/>/<base href="\/testDeploy\/" \/>/g' ./testDeploy/bin/release/net6.0/publish/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/testDeploy\/" \/>/g' ./testDeploy/bin/release/net8.0/publish/wwwroot/index.html
       
     - name: Add .nojekyll file
-      run: touch ./testDeploy/bin/release/net6.0/publish/wwwroot/.nojekyll
+      run: touch ./testDeploy/bin/release/net8.0/publish/wwwroot/.nojekyll
       
     - uses: JamesIves/github-pages-deploy-action@4.1.4
       name: gh-pages publish
