@@ -23,7 +23,7 @@ jobs:
         dotnet publish -c release
       
     - name: Change base-tag in index.html from / to the necessary
-      run: sed -i 's/<base href="\/" \/>/<base href="\/testDeploy\/" \/>/g' ./testDeploy/bin/release/net8.0/publish/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/deploy-test2\/" \/>/g' ./testDeploy/bin/release/net8.0/publish/wwwroot/index.html
       
     - name: Add .nojekyll file
       run: touch ./testDeploy/bin/release/net8.0/publish/wwwroot/.nojekyll
